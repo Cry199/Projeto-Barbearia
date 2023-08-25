@@ -1,14 +1,13 @@
-package com.barbershop;
+package com.BarberShop.Api;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
-
 @SpringBootApplication
-public class BarberShopApiApplication {
+public class ApiApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(BarberShopApiApplication.class, args);
+		SpringApplication.run(ApiApplication.class, args);
 	}
 
 }

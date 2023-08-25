@@ -1,10 +1,10 @@
-package com.barbershop;
+package com.BarberShop.Api;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class BarberShopApiApplicationTests {
+class ApiApplicationTests {
 
 	@Test
 	void contextLoads() {
