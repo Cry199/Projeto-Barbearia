@@ -2,7 +2,9 @@
 <html>
 <head>
     <title>Barbearia MTK</title>
-    <link rel="stylesheet" type="text/css" href="css/styles.css">
+    <link rel="stylesheet" type="text/css" href="../css/styles.css">
+
+    
 </head>
     <body>
         <header>
@@ -10,7 +12,7 @@
 
                 <!-- imagem do logo -->
                 <div id="area-logo">      
-                    <img class="logoImg" src="imgs/Logos/logo-inicio.png" width="150px">
+                    
                 </div>
 
                 <div id="area-menu">
@@ -27,7 +29,11 @@
         <main>
             <div id="area-principal">
 
-                
+                <form id="loginForm" action="/seu-aplicativo/LoginServlet" method="post">
+                    <input type="text" name="username" placeholder="Nome de Usuário">
+                    <input type="password" name="password" placeholder="Senha">
+                    <button type="submit">Entrar</button>
+                </form>
 
 
             </div>
