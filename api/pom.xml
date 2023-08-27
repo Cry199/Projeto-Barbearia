@@ -10,7 +10,6 @@
   <packaging>war</packaging>
 
   <name>api Maven Webapp</name>
-  <!-- FIXME change it to the project's website -->
   <url>http://www.example.com</url>
 
   <properties>
@@ -78,6 +77,8 @@
           <version>2.8.2</version>
         </plugin>
       </plugins>
+
     </pluginManagement>
+
   </build>
 </project>
