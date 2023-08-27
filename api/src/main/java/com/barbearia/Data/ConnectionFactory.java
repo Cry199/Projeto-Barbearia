@@ -7,7 +7,8 @@ import java.sql.SQLException;
 
 public class ConnectionFactory 
 {
-    public Connection getConnection() throws SQLException {
+    public Connection getConnection() throws SQLException 
+	{
 		try 
         {
 			Class.forName("com.mysql.cj.jdbc.Driver");
