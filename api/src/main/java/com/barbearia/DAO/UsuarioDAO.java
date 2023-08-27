@@ -7,7 +7,7 @@ import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
 
-import com.barbearia.Data.ConnectionBarbers;
+import com.barbearia.Data.ConnectionFactory;
 import com.barbearia.Enum.TipoUsuario;
 import com.barbearia.Model.Usuarios;
 
@@ -22,7 +22,7 @@ public class UsuarioDAO
 
         try 
         {
-            this.connection = new ConnectionBarbers().getConnection();
+            this.connection = new ConnectionFactory().getConnection();
 
 
             PreparedStatement stmt = connection.prepareStatement(sql);
@@ -45,9 +45,9 @@ public class UsuarioDAO
                 usuario.setId(rs.getInt(1));
             }
         } 
-        catch (SQLException e) 
+        catch (Exception e) 
         {
-            throw new RuntimeException(e);
+            throw new RuntimeException(e);    
         }
 
         /*
@@ -86,7 +86,7 @@ public class UsuarioDAO
 
         try 
         {
-            this.connection = new ConnectionBarbers().getConnection();
+            this.connection = new ConnectionFactory().getConnection();
 
             PreparedStatement stmt = connection.prepareStatement(sql);
 
@@ -95,13 +95,13 @@ public class UsuarioDAO
             stmt.setInt(3, usuario.getId());
             stmt.executeUpdate(); 
         } 
-        catch (SQLException e) 
+        catch (Exception e) 
         {
-            e.printStackTrace();
+            throw new RuntimeException(e);    
         }
     }
 
-    public void deletar(int id) 
+    public void excluir(int id) 
     {
         String sql = "DELETE FROM usuarios WHERE id = ?";
     
@@ -111,9 +111,9 @@ public class UsuarioDAO
           stmt.setInt(1, id);
           stmt.executeUpdate();
         } 
-        catch (SQLException e) 
+        catch (Exception e) 
         {
-          e.printStackTrace();
+            throw new RuntimeException(e);    
         }
     }
 
@@ -138,9 +138,9 @@ public class UsuarioDAO
             }
             
         } 
-        catch (SQLException e) 
+        catch (Exception e) 
         {
-            e.printStackTrace();
+            throw new RuntimeException(e);    
         }
           
         return usuario;
@@ -167,9 +167,9 @@ public class UsuarioDAO
               usuarios.add(usuario);
             }
         } 
-        catch (SQLException e) 
+        catch (Exception e) 
         {
-            e.printStackTrace();
+            throw new RuntimeException(e);    
         }
 
         return usuarios;    

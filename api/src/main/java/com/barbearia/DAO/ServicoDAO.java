@@ -5,7 +5,7 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.util.List;
 
-import com.barbearia.Data.ConnectionBarbers;
+import com.barbearia.Data.ConnectionFactory;
 import com.barbearia.Model.Servicos;
 
 public class ServicoDAO
@@ -19,7 +19,7 @@ public class ServicoDAO
 
         try 
         {
-            this.connection = new ConnectionBarbers().getConnection();
+            this.connection = new ConnectionFactory().getConnection();
 
             PreparedStatement stmt = connection.prepareStatement(sql);
 
@@ -41,7 +41,7 @@ public class ServicoDAO
 
         try 
         {
-            this.connection = new ConnectionBarbers().getConnection();
+            this.connection = new ConnectionFactory().getConnection();
 
             PreparedStatement stmt = connection.prepareStatement(sql);
 

@@ -71,9 +71,6 @@ public class Agenda
         this.preco = preco;
     }
 
-    // métodos da agenda // 
-
-
     public void confirmar() 
     {
         

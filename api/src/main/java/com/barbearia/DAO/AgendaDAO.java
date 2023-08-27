@@ -7,7 +7,7 @@ import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
 
-import com.barbearia.Data.ConnectionBarbers;
+import com.barbearia.Data.ConnectionFactory;
 import com.barbearia.Model.Agenda;
 
 public class AgendaDAO
@@ -21,7 +21,7 @@ public class AgendaDAO
 
         try 
         {
-            this.connection = new ConnectionBarbers().getConnection();
+            this.connection = new ConnectionFactory().getConnection();
 
             PreparedStatement stmt = connection.prepareStatement(sql);
 
@@ -55,7 +55,7 @@ public class AgendaDAO
 
         try 
         {
-            this.connection = new ConnectionBarbers().getConnection();
+            this.connection = new ConnectionFactory().getConnection();
 
             PreparedStatement stmt = connection.prepareStatement(sql);
 
@@ -81,7 +81,7 @@ public class AgendaDAO
         
         try 
         {
-            this.connection = new ConnectionBarbers().getConnection();
+            this.connection = new ConnectionFactory().getConnection();
 
             PreparedStatement stmt = connection.prepareStatement(sql);
 
@@ -103,7 +103,7 @@ public class AgendaDAO
 
         try 
         {
-            this.connection = new ConnectionBarbers().getConnection();
+            this.connection = new ConnectionFactory().getConnection();
 
             PreparedStatement stmt = connection.prepareStatement(sql);
 
@@ -140,7 +140,7 @@ public class AgendaDAO
 
         try
         {
-            this.connection = new ConnectionBarbers().getConnection();
+            this.connection = new ConnectionFactory().getConnection();
 
             PreparedStatement stmt = connection.prepareStatement(sql);
             stmt.setInt(1, funcionarioId);

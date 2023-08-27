@@ -5,7 +5,7 @@ import java.sql.DriverManager;
 import java.sql.SQLException;
 
 
-public class ConnectionBarbers 
+public class ConnectionFactory 
 {
     public Connection getConnection() throws SQLException {
 		try 

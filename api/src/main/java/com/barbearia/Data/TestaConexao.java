@@ -9,7 +9,7 @@ public class TestaConexao
     {
         try 
         {
-			Connection connection = new ConnectionBarbers().getConnection();
+			Connection connection = new ConnectionFactory().getConnection();
 			connection.close();
             
 			System.out.println("Conexão aberta!");
