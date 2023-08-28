@@ -10,23 +10,23 @@ body
 {
     font-size: 1em;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    background: #7e7e7e;
+    background: #CEDCDF;
 }
 
 h1
 {
-    color: #ffffff;
+    color: #707add;
     font-size: 2.5em;
 }
 
 h2
 {
-    color:#c4c4c4;
+    color:#707add;
 }
 
 h3
 {
-    color: #6a6a6a;
+    color: #707add;
     background: #40423F;
     padding: 5px;
 }
@@ -49,7 +49,7 @@ a
 
 a:link, a:visited
 {
-    color: #070b7b; 
+    color: #707add; 
 }
 
 a:hover
@@ -63,7 +63,7 @@ a:hover
 
 #area-cabecalho
 {
-    background: #2f2f2f;
+    background: #686497;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -78,14 +78,14 @@ a:hover
 
 #area-principal
 {
-    width: 920px;
+    width: 1000px;
     margin: 0 auto;
     padding: 15px;
 }
 
 #area-conteudo
 {
-    width: 660px;
+    width: 1000px;
     float: left;
 }
 
@@ -101,8 +101,7 @@ a:hover
     display: block;
     padding: 15px;
     text-align: center;
-    background: #2f2f2f;
-    color: #e8f6ff;
+    background: #686497;
 }
 
 .conteudo, .card
@@ -173,4 +172,5 @@ a:hover
 }
 
 /*  */
+
 
