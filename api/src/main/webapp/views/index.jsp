@@ -34,7 +34,7 @@
                     
                     <div class="conteudo">
                         <h2>Barbearia MTK</h2>
-                        <p>Barbearia MTK é uma barbearia que atua no mercado desde 2015, oferecendo serviços de qualidade e comodidade para seus clientes.</p>
+                        <p>Barbearia MTK e uma barbearia que atua no mercado desde 2015, oferecendo serviços de qualidade e comodidade para seus clientes.</p>
                     </div>
 
                 </div>
