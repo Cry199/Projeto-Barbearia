@@ -11,6 +11,11 @@ public class Agenda
     private Date dataHora;
     private String status;
     private double preco;
+
+    /// 
+
+    private String clienteNome;
+    private String funcionarioNome;
     
     
     public int getId() {
@@ -71,19 +76,21 @@ public class Agenda
         this.preco = preco;
     }
 
-    public void confirmar() 
-    {
-        
+    public String getNomeCliente() {
+        return clienteNome;
     }
 
-    public void cancelar() 
-    {
-        
+    public String getNomeFuncionario() {
+        return funcionarioNome;
     }
 
-    public double calcularValor()
+    public void setNomeCliente(String nomeCliente) 
     {
-
-        return 0.0;
+        this.clienteNome = nomeCliente;
     }
+
+    public void setNomeFuncionario(String nomeFuncionario) 
+    {
+        this.funcionarioNome = nomeFuncionario;
+    } 
 }

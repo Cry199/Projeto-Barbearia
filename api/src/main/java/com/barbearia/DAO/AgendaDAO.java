@@ -3,7 +3,6 @@ package com.barbearia.DAO;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
-import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -161,11 +160,49 @@ public class AgendaDAO
                 agendas.add(agenda);
             }
         }
-        catch( SQLException e)
+        catch (Exception e) 
         {
-            e.printStackTrace();
+            throw new RuntimeException(e);    
         }
 
         return agendas;
-    }    
+    } 
+    
+    // Agenda com o nome do cliente, o nome do funcionário e a hora da agenda: //
+    public List<Agenda> listarAgendas()
+    {
+        String sql = 
+        "SELECT CONCAT(c.nome, ' ', c.sobrenome) AS nome_cliente," + 
+        "CONCAT(f.nome, ' ', f.sobrenome) AS nome_funcionario," +
+        "a.data_hora AS hora_agenda FROM agendas a " + 
+        "JOIN usuarios c ON a.cliente_id = c.id " + 
+        "JOIN  usuarios f ON a.funcionario_id = f.id";
+
+        List<Agenda> agendas = new ArrayList<>();
+
+        try
+        {
+            this.connection = new ConnectionFactory().getConnection();
+
+            PreparedStatement stmt = connection.prepareStatement(sql);
+
+            ResultSet rs = stmt.executeQuery();
+
+            while(rs.next())
+            {
+                Agenda agenda = new Agenda();  
+                agenda.setNomeCliente(rs.getString("nome_cliente"));
+                agenda.setNomeFuncionario(rs.getString("nome_funcionario"));
+                agenda.setDataHora(rs.getDate("hora_agenda"));
+      
+                agendas.add(agenda);
+            }
+        }
+        catch (Exception e) 
+        {
+            throw new RuntimeException(e);    
+        }
+
+        return agendas;
+    }
 }

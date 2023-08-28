@@ -1,3 +1,6 @@
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
+
+
 <!DOCTYPE html>
 <html>
     <head>
@@ -32,10 +35,21 @@
                 <div id="area-conteudo">
                     
                     <div class="conteudo">
-                        
 
+                        <jsp:useBean id="agendaDAO" class="com.barbearia.dao.AgendaDAO" />
+
+                        <table>
+                            <c:forEach var="agenda" items="${agendaDAO.listarAgendas()}">
+                              
+                              <tr>
+                                <td>${agenda.nomeCliente}</td> 
+                                <td>${agenda.funcionarioNome}</td>
+                                <td>${agenda.dataHora}</td>
+                              </tr>
+                            
+                            </c:forEach>           
+                        </table>
                     </div>
-
                 </div>
 
             </div>
